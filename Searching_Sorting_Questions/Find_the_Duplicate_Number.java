@@ -1,6 +1,6 @@
 public class Find_the_Duplicate_Number {
     public static void main(String[] args) {
-        int[] nums = {1, 3, 4, 2, 2};
+        int[] nums = {1, 1, 2};
 
         int ans = cycleSort(nums);
         System.out.println(ans);
