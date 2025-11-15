@@ -26,12 +26,12 @@ public class MinHeap {
         if ( heap.isEmpty() ){
             throw new IllegalStateException("Heap is Empty");
         }
-        int max = heap.get(0);
+        int min = heap.get(0);
         int lastIndex = heap.size() - 1;
         heap.set(0, heap.get(lastIndex));
         heap.remove(lastIndex);
         downHeap(0);
-        return max;
+        return min;
     }
     private void downHeap(int index){
         int smallest = index;

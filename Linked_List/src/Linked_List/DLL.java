@@ -37,7 +37,7 @@ public class DLL {
 
     void insert(int after, int val){
         Node p = find(after);
-        if ( p == null ){
+        if (p == null){
             System.out.println("not exist");
             return;
         }
@@ -45,10 +45,12 @@ public class DLL {
         Node node = new Node(val);
         node.next = p.next;
         p.next = node;
-        if ( node.next != null ){
+        node.prev = p;
+        if (node.next != null){
             node.next.prev = node;
         }
     }
+
 
     Node find(int val){
         Node node = head;
